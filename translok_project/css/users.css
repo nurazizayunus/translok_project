@@ -1,0 +1,134 @@
+:root {
+  --user-border: #e2e8f0;
+  --user-muted: #64748b;
+  --user-bg: #f8fafc;
+  --user-card: #ffffff;
+}
+
+/* ❌ JANGAN SET BACKGROUND DI .users-page */
+/* .users-page { background: var(--user-bg); } */
+
+.users-page .sidebar {
+  box-shadow: none;
+}
+
+.users-page .content {
+  padding: 24px 28px 40px;
+  background: var(--user-bg);
+  border-radius: 16px;
+}
+
+.users-page .header {
+  box-shadow: none;
+}
+
+.users-page .card#userManagement {
+  background: var(--user-card);
+  border: 1px solid var(--user-border);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.users-page .card#userManagement > h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.users-page .user-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.users-page .user-form {
+  border: 1px solid var(--user-border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.users-page .user-form label {
+  color: var(--user-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.users-page .user-form input,
+.users-page .user-form select {
+  background: #ffffff;
+  border: 1px solid var(--user-border);
+  box-shadow: none;
+}
+
+.users-page .user-form input:focus,
+.users-page .user-form select:focus {
+  border-color: #94a3b8;
+}
+
+.users-page .user-form .form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.users-page .user-details {
+  border: 1px dashed var(--user-border);
+  border-radius: 8px;
+  padding: 10px 12px 12px;
+  background: #fbfdff;
+}
+
+.users-page .user-details > summary {
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--user-muted);
+  list-style: none;
+}
+
+.users-page .user-details > summary::after {
+  content: "▾";
+  float: right;
+  color: #94a3b8;
+}
+
+.users-page .user-details[open] > summary::after {
+  content: "▴";
+}
+
+.users-page select:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.users-page .table-wrap {
+  border: 1px solid var(--user-border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.users-page table {
+  min-width: 720px;
+  background: #ffffff;
+}
+
+.users-page thead {
+  background: linear-gradient(90deg, #f8fafc, #eef2ff);
+}
+
+.users-page th,
+.users-page td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--user-border);
+}
+
+.users-page tbody tr:hover {
+  background: #f3f6fb;
+}
+
+@media (max-width: 760px) {
+  .users-page .content {
+    padding: 18px 16px 36px;
+  }
+}
